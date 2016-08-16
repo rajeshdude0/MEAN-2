@@ -29,6 +29,12 @@ app.config(['$stateProvider','$urlRouterProvider',function ($stateProvider, $url
       templateUrl: '/employee.html',
       controller:['$scope','company','employee_id',function($scope,company,employee_id){
         $scope.employee = employee_id;   
+          $scope.updateEmployee = function(){
+    
+        console.log("its executing");
+        console.log(company.updateEmployee($scope.employee._id,$scope.employee));
+    
+    }
    //      console.log(employee_id);
       }],
      resolve:{
@@ -112,9 +118,11 @@ app.controller('EmployeeController',['$scope','company','company_id',function($s
      $scope.getEmployee = function(emp){
         return company.getEmployee(emp);
     }; 
+    $scope.updateEmployee = function(){
     
-    if(backemployeeid!==$scope.company.employee_id){
-        console.log(company.updateEmployee(backemployeeid._id,$scope.company.employee_id));
+        console.log("its executing");
+        console.log(company.updateEmployee($scope.company.employee_id._id,$scope.company.employee_id));
+    
     }
     $scope.addEmployee = function(){
         if($scope.name === ''){return;}
