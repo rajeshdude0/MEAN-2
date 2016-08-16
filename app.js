@@ -61,6 +61,6 @@ var mongoose = require('mongoose');
 require('./models/Employee');
 require('./models/Company');
 
-mongoose.connect('mongodb://localhost/weekdemo');
+mongoose.connect('mongodb://ufbegnjkfswsaas:jBZ3kNDd0uKutPS97RvY@bqdd07y2mwv5rhk-mongodb.services.clever-cloud.com:27017/bqdd07y2mwv5rhk');
 
 module.exports = app;
