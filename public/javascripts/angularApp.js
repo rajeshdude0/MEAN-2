@@ -30,10 +30,7 @@ app.config(['$stateProvider','$urlRouterProvider',function ($stateProvider, $url
       controller:['$scope','company','employee_id',function($scope,company,employee_id){
         $scope.employee = employee_id;   
           $scope.updateEmployee = function(){
-    
-        console.log("its executing");
-        console.log(company.updateEmployee($scope.employee._id,$scope.employee));
-    
+         company.updateEmployee($scope.employee._id,$scope.employee);
     }
    //      console.log(employee_id);
       }],
