@@ -62,12 +62,12 @@
       
       <script type="text/ng-template" id="/employee.html">
         <div class="page-header">
-        <h2 >{{employee.name}}  <span class="space glyphicon glyphicon-pencil" style="font-size:15px"></span></h2>
+        <h2 > <span editable-text="employee.name" e-form="editNameForm">{{employee.name}}</span> </h2> <span class="space glyphicon glyphicon-pencil" style="font-size:15px" ng-click="editNameForm.$show()" ng-hide="editNameForm.$visible"></span>
         </div>
         
-        <h5>DOB: </span><h5> <h3><span editable-text="employee.dob">{{employee.dob}}</span></h3> <span  class="space glyphicon glyphicon-pencil" style="font-size:15px"></span>
-        <h5>Age: <h5> <h3> {{employee.age}} <span  class="space glyphicon glyphicon-pencil" style="font-size:15px"></h3>
-        <h5>Address:<h5> <h3>{{employee.address}} <span  class="space glyphicon glyphicon-pencil" style="font-size:15px"></h3>
+        <h5>DOB: </h5> <h3><span editable-text="employee.dob" e-form="editDobForm">{{employee.dob}}</span></h3> <span  class="space glyphicon glyphicon-pencil" style="font-size:15px" ng-click="editDobFrom.$show()" ng-hide="editDobForm.$visible"></span>
+        <h5>Age: </h5> <h3> <span editable-text="employee.age" e-form="editAgeForm">{{employee.age}}</span></h3> <span  class="space glyphicon glyphicon-pencil" style="font-size:15px" ng-click="editDobFrom.$show()" ng-hide="editDobFrom.$visible"></span>
+        <h5>Address:</h5> <h3><span editable-text="employee.address" e-form="editAddressForm">{{employee.address}}</span></h3> <span  class="space glyphicon glyphicon-pencil" style="font-size:15px" ng-click="editAddressFrom" ng-hide="editAddressFrom.$visible"></span>
       </script>
       
   </body>
